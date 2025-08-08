@@ -1,187 +1,56 @@
+
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Burger District</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #1c1c1c;
-      color: white;
-    }
-    header {
-      background-color: #d62828;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-    }
-    nav {
-      background-color: #333;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      background: url('hero.jpg') no-repeat center center/cover;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-shadow: 2px 2px 5px #000;
-    }
-    .hero h2 {
-      font-size: 3rem;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 15px;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    .menu-section {
-      text-align: center;
-    }
-    .menu-section h3 {
-      font-size: 2.2rem;
-      margin-bottom: 30px;
-    }
-    .burgers {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 30px;
-    }
-    .burger-card {
-      background-color: #2c2c2c;
-      border-radius: 10px;
-      width: 280px;
-      padding: 20px;
-      text-align: center;
-    }
-    .burger-card img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .burger-card h4 {
-      margin-top: 15px;
-      font-size: 1.3rem;
-    }
-    .burger-card p {
-      color: #ccc;
-    }
-    .about {
-      text-align: center;
-      margin-top: 60px;
-    }
-    .about h3 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    .about p {
-      color: #ccc;
-      max-width: 800px;
-      margin: auto;
-    }
-    .contact {
-      text-align: center;
-      margin-top: 60px;
-    }
-    .contact form {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .contact input, .contact textarea {
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-    }
-    .contact button {
-      padding: 12px;
-      background-color: #d62828;
-      color: white;
-      font-weight: bold;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #111;
-      color: #aaa;
-      margin-top: 60px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Burger District</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fefefe;
+            color: #333;
+        }
+        header {
+            background-color: #111;
+            color: #fff;
+            padding: 2em;
+            text-align: center;
+        }
+        section {
+            padding: 2em;
+            max-width: 900px;
+            margin: auto;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+        .contact {
+            margin-top: 2em;
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Burger District</h1>
-  </header>
+    <header>
+        <h1>Burger District</h1>
+        <p>Burgeri artizanali delicioși în inima orașului!</p>
+    </header>
 
-  <nav>
-    <a href="#">Acasă</a>
-    <a href="#meniu">Meniu</a>
-    <a href="#despre">Despre noi</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <section>
+        <h2>Unde ne găsești?</h2>
+        <p>Ne găsești în centrul orașului. Te așteptăm cu cei mai gustoși burgeri!</p>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.3870527562287!2d24.15189711552653!3d45.79652947910605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474c679111d899d3%3A0x9e9ea9eb1b95fc5b!2sSibiu!5e0!3m2!1sro!2sro!4v1682792682042!5m2!1sro!2sro" 
+            allowfullscreen="" loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
 
-  <section class="hero">
-    <h2>Burgeri artizanali, gust desăvârșit 🍔</h2>
-  </section>
-
-  <section class="container menu-section" id="meniu">
-    <h3>Meniul nostru</h3>
-    <div class="burgers">
-      <div class="burger-card">
-        <img src="burger1.jpg" alt="Burger clasic">
-        <h4>Burger Clasic</h4>
-        <p>Vită premium, salată, roșii, cașcaval cheddar, sos special - 24 RON</p>
-      </div>
-      <div class="burger-card">
-        <img src="burger2.jpg" alt="Burger picant">
-        <h4>Burger Picant</h4>
-        <p>Vită picantă, jalapeños, cheddar, maioneză iute - 28 RON</p>
-      </div>
-      <div class="burger-card">
-        <img src="burger3.jpg" alt="Burger vegetarian">
-        <h4>Burger Vegetarian</h4>
-        <p>Chiftea vegetală, legume la grătar, humus și avocado - 22 RON</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="container about" id="despre">
-    <h3>Despre noi</h3>
-    <p>Burger District este un restaurant local ce aduce în farfuria ta gustul autentic al burgerului artizanal. Folosim doar ingrediente proaspete, carne de calitate și rețete proprii create cu pasiune. Te așteptăm să ne vizitezi și să guști diferența!</p>
-  </section>
-
-  <section class="container contact" id="contact">
-    <h3>Contactează-ne</h3>
-    <form>
-      <input type="text" placeholder="Numele tău" required>
-      <input type="email" placeholder="Emailul tău" required>
-      <textarea rows="5" placeholder="Mesajul tău" required></textarea>
-      <button type="submit">Trimite</button>
-    </form>
-  </section>
-
-  <footer>
-    &copy; 2025 Burger District. Toate drepturile rezervate.
-  </footer>
+        <div class="contact">
+            📞 Telefon: <a href="tel:+40749821316">0749 821 316</a>
+        </div>
+    </section>
 </body>
 </html>
